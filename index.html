@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Artwishlist Definitions and Workflows by Artwishlist</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Artwishlist Definitions and Workflows</h1>
+        <h2>Code Manifesto, Best Practices, Do&#39;s and Dont&#39;s</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/Artwishlist" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="definitions" class="anchor" href="#definitions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Definitions</h1>
+
+<h3>
+<a id="roles" class="anchor" href="#roles" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Roles:</h3>
+
+<ul>
+<li>Stakeholders (Christian, Dimitris)</li>
+<li>Product Owners (Romanos)</li>
+<li>In-house Dev team (Romanos, Apostolis)</li>
+<li>Devs (Apostolis, Romanos, Freelancers)</li>
+</ul>
+
+<p>### Pivotal:</p>
+
+<ul>
+<li>Finished -&gt; Done all commits</li>
+<li>Delivered -&gt; Pushed to develop and deployed on staging</li>
+<li>Accepted -&gt; All works fine, pushed to master and deployed to production</li>
+</ul>
+
+<h3>
+<a id="code-manifesto-cm" class="anchor" href="#code-manifesto-cm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Manifesto (CM)</h3>
+
+<ol>
+<li>Create new branch feat/story-name or fix/story-name or chore/story-name</li>
+<li>Always rebase</li>
+<li>Always include in commits [#story-id]</li>
+<li>On last commit [Finishes #story-id]</li>
+<li>Create tests (Unit, Functional, Behavioral Tests)</li>
+<li>Good naming classes/methods/variables</li>
+<li>Create comments for where it gets too complicated</li>
+<li>Run <a href="http://rubocop.readthedocs.io/en/">http://rubocop.readthedocs.io/en/</a> against all RoR file changes</li>
+<li>Run <a href="http://www.coffeelint.org/">http://www.coffeelint.org/</a> against all Coffeescript file changes</li>
+<li>Run <a href="https://github.com/brigade/scss-lint">https://github.com/brigade/scss-lint</a> against all SCSS file changes</li>
+</ol>
+
+<h3>
+<a id="code-review-cr" class="anchor" href="#code-review-cr" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Review (CR)</h3>
+
+<ol>
+<li>Is code readable
+
+<ol>
+<li>Good naming classes/methods/variables</li>
+<li>Create comments for where it gets too complicated</li>
+</ol>
+</li>
+<li>Is OOP used?</li>
+<li>Check code security</li>
+<li>Check code performance</li>
+</ol>
+
+<h3>
+<a id="security-best-practices" class="anchor" href="#security-best-practices" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Security Best Practices:</h3>
+
+<ul>
+<li>Enable and enforce 2WA wherever possible</li>
+<li>Regenerate passwords and API tokens whenever a collaborator leaves or/and every month</li>
+<li>Roles and Accounts in AWS, Github, PivotalTracker, Apps. Everyone is responsible for his/her own actions</li>
+</ul>
+
+<h1>
+<a id="work-flow-protocol" class="anchor" href="#work-flow-protocol" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Work Flow Protocol</h1>
+
+<h3>
+<a id="stakeholders" class="anchor" href="#stakeholders" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stakeholders:</h3>
+
+<ol>
+<li>Check for Bugs</li>
+<li>Determine new Features</li>
+<li>Create Roadmap</li>
+</ol>
+
+<h3>
+<a id="stakeholders--product-owners" class="anchor" href="#stakeholders--product-owners" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stakeholders + Product Owners:</h3>
+
+<ol>
+<li>Provide product owner with docs, images, general requirements</li>
+<li>Set priorities on which features are most needed</li>
+<li>Check functionality on staging</li>
+<li>Mark story as Accepted</li>
+</ol>
+
+<h3>
+<a id="product-owners" class="anchor" href="#product-owners" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Product Owners:</h3>
+
+<ol>
+<li>Create Epics</li>
+<li>Create New Pivotal Stories
+
+<ol>
+<li>Gather all information regarding the 'issue'</li>
+<li>Almost all stories should be part of an epic</li>
+<li>A new story should be as small as possible</li>
+<li>Add subtasks in each story (fat subtasks, thin description)</li>
+<li>Provide examples and images/docs whenever possible</li>
+</ol>
+</li>
+<li>Assign stories to Devs</li>
+</ol>
+
+<h3>
+<a id="in-house-dev-team" class="anchor" href="#in-house-dev-team" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>In-house Dev team:</h3>
+
+<ol>
+<li>Calculates and add Points for stories</li>
+<li>Accept pull request (Review)</li>
+<li>Mark story as delivered</li>
+<li>Deploy on staging</li>
+<li>Check functionality on staging</li>
+<li>Push code to master</li>
+<li>Deploy on master</li>
+</ol>
+
+<h3>
+<a id="devs" class="anchor" href="#devs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Devs:</h3>
+
+<ol>
+<li>Communicate subtasks modification on pivotal:
+
+<ol>
+<li>Change subtasks as needed</li>
+<li>Writing explanation why a change was needed as comment with reference to requester</li>
+<li>Continue working until feedback</li>
+</ol>
+</li>
+<li>Writes code according to Code Manifesto (CM)</li>
+<li>Pull requests to develop branch</li>
+</ol>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
